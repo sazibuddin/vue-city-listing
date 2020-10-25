@@ -4,7 +4,7 @@
       <route-link :to="destination.slug"><h1>{{ destination.name }}</h1></route-link>
       <figure>
         <route-link :to="destination.slug">
-          <img :src="sdf" :alt="destination.name">
+          <img src="../assets/brazil.jpg" :alt="destination.name">
         </route-link>
       </figure>
     </div>
@@ -22,6 +22,11 @@ export default {
   data () {
     return {
       destinations: store.destinations
+    }
+  },
+  methods: {
+    getPic (index) {
+      return '../assets/' + index
     }
   }
 }
