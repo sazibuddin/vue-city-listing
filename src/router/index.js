@@ -33,7 +33,7 @@ const routes = [
   },
   {
     path: '/jamaica',
-    name: 'Hamaica',
+    name: 'Jamaica',
     component: () => import('../views/Jamaica.vue')
   }
 ]
