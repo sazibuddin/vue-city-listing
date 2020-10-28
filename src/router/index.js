@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Brazil from '../views/Brazil.vue'
 
 const routes = [
   {
@@ -19,22 +18,22 @@ const routes = [
   {
     path: '/brazil',
     name: 'Brazil',
-    component: Brazil
+    component: () => import(/* webpackChunkName: "bangladesh" */'../views/Brazil.vue')
   },
   {
     path: '/bangladesh',
     name: 'Bangladesh',
-    component: () => import('../views/Bangladesh.vue')
+    component: () => import(/* webpackChunkName: "bangladesh" */'../views/Bangladesh.vue')
   },
   {
     path: '/hawaii',
     name: 'Hawaii',
-    component: () => import('../views/Hawaii.vue')
+    component: () => import(/* webpackChunkName: "hawaii" */'../views/Hawaii.vue')
   },
   {
     path: '/jamaica',
     name: 'Jamaica',
-    component: () => import('../views/Jamaica.vue')
+    component: () => import(/* webpackChunkName: "jamaica" */'../views/Jamaica.vue')
   }
 ]
 const router = createRouter({
